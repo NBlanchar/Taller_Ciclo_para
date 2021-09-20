@@ -117,3 +117,14 @@ promedioHombres = edadHombres / hombre
 promedioMujeres = edadMujeres / mujer
 print(f'El promedio de edad de los hombres es: {promedioHombres}')
 print(f'El promedio de edad de las mujeres es: {promedioMujeres}')
+
+# Ejercicio 5
+cantidad = int(input('Digite la cantiduad de numeros: '))
+for x in range(cantidad):
+    if(x == 0):
+        menor = int(input('Digite primer numero: '))
+    else:
+        numero = int(input(f'Digite {x+1} numero: '))
+        if(numero < menor):
+            menor = numero
+print(f'EL numero menor es: {menor}')
