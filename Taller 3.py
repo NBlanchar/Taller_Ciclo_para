@@ -144,5 +144,17 @@ for x in range(5):
         print(f' la persona {x+1} bajo de Peso \n {diferenciaPeso} Kg')
     else:
         print('La persona {x+1} mantuvo el mismo peso ')
-    
-        
+
+# Ejercicio 7
+total = 0
+agregar = 'si'
+while agregar == 'si':
+    precio = float(input('Digite el precio del articulo: '))
+    cantidad = int(input('Digite la cantidad de articulos: '))
+    if(cantidad > 0 and precio > 0):
+        precioArticulo = cantidad * precio
+        total = total + precioArticulo
+    else:
+        print('Digite valores validos')
+    agregar = input('Desea agregar otro articulo: ')
+print(f'EL total a pagar es: ${total:,}')
