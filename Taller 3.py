@@ -94,3 +94,26 @@ for x in range(trabajadores):
         salarios = salarios + salario
 print(f'EL total a pagar es: ${total:,}')
 print(salarios)
+
+# Ejercicio 4
+alumnos = int(input('Digite la cantidad de alumos: '))
+hombre = 0
+mujer = 0
+edadHombres = 0
+edadMujeres = 0
+for x in range(alumnos):
+    genero = input('Digite el genero del alumno: ')
+    if(genero == 'hombre'):
+        hombre = hombre + 1
+        edad = int(input('Digite la edad del alumno: '))
+        edadHombres = edadHombres + edad
+    elif(genero == 'mujer'):
+        mujer = mujer + 1
+        edad = int(input('Digite la edad de la alumna: '))
+        edadMujeres = edadMujeres + edad
+    else:
+        print('Recueda los datos validos son: hombre o mujer')
+promedioHombres = edadHombres / hombre
+promedioMujeres = edadMujeres / mujer
+print(f'El promedio de edad de los hombres es: {promedioHombres}')
+print(f'El promedio de edad de las mujeres es: {promedioMujeres}')
