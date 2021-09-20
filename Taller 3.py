@@ -128,3 +128,21 @@ for x in range(cantidad):
         if(numero < menor):
             menor = numero
 print(f'EL numero menor es: {menor}')
+
+# Ejercicio 6
+for x in range(5):
+    pesoAnterior = float(input('Digite el peso de la ultima reunion: '))
+    peso = 0
+    for i in range(10):
+        pesobascula = float(input(f'Digite el peso {i+1}: '))
+        peso = peso + pesobascula
+    promedioPeso = peso / 10
+    diferenciaPeso = promedioPeso - pesoAnterior
+    if(diferenciaPeso > 0):
+        print(f'la persona {x+1} subio de peso \n {diferenciaPeso} Kg')
+    elif(diferenciaPeso < 0):
+        print(f' la persona {x+1} bajo de Peso \n {diferenciaPeso} Kg')
+    else:
+        print('La persona {x+1} mantuvo el mismo peso ')
+    
+        
