@@ -180,3 +180,29 @@ for x in range(clientes):
     else:
         print('Digite datos validos')
 print(f'El teatro dejo de percibir ${perdida:,}')
+
+# Ejercicio 9
+cadena = ''
+total = 0
+for x in range(100):
+    ventas = int(input(f'Digite las ventas del vendedor {x+1}: '))
+    comision = 0
+    if(ventas > 0 and ventas <= 20000000):
+        comision = ventas * 0.1
+    elif(ventas > 20000000 and ventas < 40000000):
+        comision = ventas * 0.15
+    elif(ventas >= 4000000 and ventas < 80000000):
+        comision = ventas * 0.2
+    elif(ventas >= 80000000 and ventas < 160000000):
+        comision = ventas * 0.25
+    elif(ventas >= 16000000):
+        comision = ventas * 0.3
+    else:
+        print('digite un valor valido')
+    total = total + comision
+    if(comision != 0):
+        strventas = f'Las ventas del {x+1} trabajador es: ${ventas:,}'
+        strsalario = f' y su comisión es: ${comision:,} \n'
+        cadena = cadena + strventas + strsalario
+print(f'EL total a pagar es: ${total:,}')
+print(cadena)
