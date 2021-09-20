@@ -53,7 +53,10 @@ if (muestra != 0):
     categoria3 = 0
     error = 0
     for x in range(muestra):
-        edad = int(input(f'Digite la edad del {x+1} {animal}: '))
+        if(animal == 'jirafa'):
+            edad = int(input(f'Digite la edad de la {animal} No {x+1} : '))
+        else:
+            edad = int(input(f'Digite la edad del {animal} No {x+1} : '))
         if (edad >= 0 and edad < 2):
             categoria1 = categoria1 + 1
         elif(edad == 2):
@@ -71,4 +74,23 @@ if (muestra != 0):
     print(f'{porcentaje1} % tiene entre 0 y 1 año')
     print(f'{porcentaje2} % tiene mas de 1 y menos de 3 año')
     print(f'{porcentaje3} % tiene 3 o mas año')
-    
+
+# Ejercicio 3
+trabajadores = int(input('Digite la cantidad de trabajadores en la empresa: '))
+salarios = ''
+total = 0
+for x in range(trabajadores):
+    horas = int(input(f'Digite las horas laboradas por el {x+1} trabajador: '))
+    pago = 0
+    if(horas > 0 and horas <= 40):
+        pago = horas * 20
+    elif(horas > 40):
+        pago = 800 + ((horas - 40) * 25)
+    else:
+        print('digite un valor valido')
+    total = total + pago
+    if(pago != 0):
+        salario = f'El salario del {x+1} trabajador es: ${pago:,} \n'
+        salarios = salarios + salario
+print(f'EL total a pagar es: ${total:,}')
+print(salarios)
