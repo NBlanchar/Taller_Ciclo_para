@@ -158,3 +158,25 @@ while agregar == 'si':
         print('Digite valores validos')
     agregar = input('Desea agregar otro articulo: ')
 print(f'EL total a pagar es: ${total:,}')
+
+# Ejercicio 8
+clientes = int(input('Digite la cantidad de clientes: '))
+precio = float(input('Digite el precio de la entrada: '))
+perdida = 0
+for x in range(clientes):
+    edad = int(input('Digite la edad del cliente: '))
+    if(edad > 4 and edad < 15):
+        perdida = perdida + (precio * 0.35)
+    elif(edad > 14 and edad < 20):
+        perdida = perdida + (precio * 0.25)
+    elif(edad > 19 and edad < 46):
+        perdida = perdida + (precio * 0.1)
+    elif(edad > 45 and edad < 66):
+        perdida = perdida + (precio * 0.25)
+    elif(edad > 65):
+        perdida = perdida + (precio * 0.35)
+    elif(edad >= 0 and edad < 5):
+        print('NO se permite la entrada a niños menores de 5 años')
+    else:
+        print('Digite datos validos')
+print(f'El teatro dejo de percibir ${perdida:,}')
