@@ -206,3 +206,36 @@ for x in range(100):
         cadena = cadena + strventas + strsalario
 print(f'EL total a pagar es: ${total:,}')
 print(cadena)
+
+# Ejercicio 10
+
+
+def encuesta():
+    candidato1 = 0
+    candidato2 = 0
+    candidato3 = 0
+    print('Escriba el numero del 1 al 3 segun el candidado')
+    for x in range(5):
+        candidato = int(input('Ingrese el numero del candidato :'))
+        if(candidato == 1):
+            candidato1 = candidato1 + 1
+        elif(candidato == 2):
+            candidato2 = candidato2 + 1
+        elif(candidato == 3):
+            candidato3 = candidato3 + 1
+        else:
+            print('Dato errones ingrese valores del 1 al 3')
+    if (candidato1 == candidato2 and candidato2 == candidato3):
+        print(f'Triple empate con {candidato2} votos')
+    elif(candidato1 == candidato2 and candidato2 > candidato3):
+        print(f'Empate entre el 1 y 2 candidato con {candidato2} votos')
+    elif(candidato1 == candidato3 and candidato1 > candidato2):
+        print(f'Empate entre el 1 y 3 candidato con {candidato1} votos')
+    elif(candidato3 == candidato2 and candidato2 > candidato1):
+        print(f'Empate entre el 2 y 3 candidato con {candidato3} votos')
+    elif(candidato1 > candidato2 and candidato1 > candidato3):
+        print(f'El ganador es el candidato 1 con {candidato1} votos')
+    elif(candidato2 > candidato1 and candidato2 > candidato3):
+        print(f'El ganador es el candidato 2 con {candidato2} votos')
+    elif(candidato3 > candidato1 and candidato3 > candidato1):
+        print(f'El ganador es el candidato 3 con {candidato3} votos')
